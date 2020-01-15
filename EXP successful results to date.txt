@@ -1,0 +1,1001 @@
+[1]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+
+[2]
+Electron-Neutrino
+Proton			
+Neutron			
+Electron			
+
+[3]
+Electron		
+Electron-Neutrino	
+Proton			
+Neutron			
+Positron			
+
+[4]
+Positron			
+Electron-antineutrino	
+Proton			
+Neutron			
+Electron		
+
+[5]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Up Quark		
+Down Quark		
+
+[6]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+
+[7]
+Neutron			
+Proton			
+Anti-Proton		
+Electron		
+Muon			
+Muon-Neutrino		
+
+[8]
+Antimuon		
+Proton			
+Neutron			
+Electron		
+Muon			
+Muon-Neutrino		
+Photon			
+
+[9]
+Proton			
+Neutron			
+Electron		
+Muon			
+Muon-Antineutrino	
+
+[10]
+Neutron			
+Electron		
+Muon			
+Charm Quark		
+Strange Quark		
+Photon			
+
+[11]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Muon			
+Anti-Charm Antiquark	
+Anti-Strange Antiquark	
+
+[12]
+Proton			
+Neutron			
+Electron		
+Muon			
+Muon-Neutrino		
+Tau Lepton		
+Tau-Neutrino		
+Anti-Tau Lepton		
+Tau-Antineutrino	
+Top Quark		
+Photon			
+
+[13]
+Neutron			
+Electron		
+Muon			
+Muon-Neutrino		
+W Boson (+)			
+Electron		
+Positron			
+Electron-antineutrino	
+
+[14]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+
+[15]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Delta - uud		
+
+[16]
+Neutron
+Positron			
+Electron-antineutrino	
+Electron
+Muon
+bottom Lambda - udb	
+
+[17]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Xi - uss		
+
+[18]	
+Proton			
+Neutron			
+Electron		
+Muon			
+Muon-Neutrino		
+W Boson (+)			
+Electron		
+Positron			
+Electron-antineutrino	
+
+[19]
+Proton			
+Neutron			
+Muon			
+Muon-Neutrino		
+Electron		
+Positron			
+Electron-antineutrino	
+Sigma - uus		
+
+[20]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Delta - uuu		
+Charm Quark		
+Strange Quark		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+
+[21]
+Proton			
+Up Quark		
+Down Quark		
+Neutron			
+Electron		
+Muon			
+Muon-Neutrino		
+W Boson (+)			
+Electron		
+Positron			
+Electron-antineutrino	
+bottom Sigma - ddb	
+Xi - dss		
+
+[22]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+Neutral Pion - uu/dd/	
+Kaon + - us/		
+
+[23]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Charm Quark		
+Strange Quark		
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Up Quark		
+Down Quark		
+Delta - udd		
+Delta - ddd		
+Lambda - uds		
+
+[24]
+Neutron
+Positron			
+Electron-antineutrino	
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+charmed Lambda - udc	
+bottom Lambda - udb	
+Eta			
+Eta Prime		
+Rho - ud/		
+
+[25]
+Charm Quark		
+Strange Quark		
+Electron		
+Neutron
+Positron			
+Up Quark		
+Down Quark		
+Electron-antineutrino	
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+bottom Lambda - udb	
+K-Long - dx/+sd/	
+Rho - u/d		
+Phi - ss/		
+
+[26]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+Sigma - uds		
+SIgma - dds		
+bottom Sigma - uub				
+
+[27]
+Electron		
+Neutron
+Positron			
+Up Quark		
+Down Quark		
+Electron-antineutrino	
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+bottom Sigma - ddb	
+Xi - dss		
+Omega - sss		
+charmed Omega - ssc	
+Pion+ - ud/					
+Pion- - u/d		
+Neutral Pion - uu/dd/	
+
+[28]
+Positron			
+Electron-antineutrino	
+Electron		
+Neutron
+Delta - uuu		
+Charm Quark		
+Strange Quark		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+bottom Sigma - ddb	
+Xi - dss		
+Omega - sss		
+charmed Omega - ssc	
+Up Quark		
+Down Quark		
+Pion+ - ud/					
+Pion- - u/d		
+Neutral Pion - uu/dd/	
+
+[29]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+bottom Sigma - ddb	
+Xi - dss		
+Omega - sss		
+charmed Omega - ssc	
+Charm Quark		
+Strange Quark		
+Up Quark		
+K-Short - ds/-sd/	
+J/Psi - cc/		
+Upsilon - bb/		
+
+[30]
+Electron		
+Neutron
+Positron			
+Electron-antineutrino	
+Charm Quark		
+Strange Quark		
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+bottom Sigma - ddb	
+Xi - dss		
+Omega - sss		
+Kaon + - us/		
+Kaon - - u/s		
+
+[31]
+Positron			
+Electron		
+Neutron
+Electron-antineutrino	
+Charm Quark		
+Strange Quark		
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+Pion- - u/d		
+Neutral Pion - uu/dd/	
+
+[32]
+Neutron
+Positron			
+Electron		
+Electron-antineutrino	
+Charm Quark		
+Strange Quark		
+Delta - uuu		
+Muon			
+Muon-Neutrino		
+Pion+ - ud/					
+Neutral Kaon - ds/	
+K-Short - ds/-sd/	
+Charm Quark		
+Strange Quark		
+Anti-Charm Antiquark	
+Anti-Strange Antiquark	
+J/Psi - cc/		
+Upsilon - bb/		
+
+[33]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+
+[34]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Down Quark		
+Photon			
+Gluon			
+
+[35]
+Neutron			
+Electron		
+Proton			
+Anti-Proton		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+
+[36]
+Anti-Proton		
+Proton			
+Neutron			
+Electron		
+Electron-Neutrino	
+Electron-antineutrino	
+
+[37]
+Proton			
+Anti-Proton		
+Electron		
+Electron-Neutrino	
+Electron-antineutrino	
+
+[38]
+Positron			
+Electron-antineutrino	
+Proton			
+Electron-Neutrino	
+
+[39]
+Electron-Neutrino	
+Positron			
+Proton			
+Anti-Proton		
+Electron		
+Electron-antineutrino	
+
+[40]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-antineutrino	
+
+[41]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Positron			
+Electron-antineutrino	
+Top Quark		
+Photon			
+Gluon			
+W Boson (+)		
+
+[42]
+Electron		
+Positron			
+Photon			
+Proton			
+Anti-Proton		
+Neutron			
+Gluon			
+W Boson (+)		
+
+[43]
+Neutron			
+Electron		
+Positron			
+W Boson (+)		
+Proton			
+Anti-Proton		
+
+[44]
+Xi - dss		
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+charmed Omega - ssc	
+
+[45]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Xi - dss		
+charmed Omega - ssc	
+
+[46]
+Positron			
+Electron-antineutrino	
+Proton			
+Anti-Proton		
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+charmed Omega - ssc	
+
+[47]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Omega - sss		
+charmed Omega - ssc	
+
+[48]
+Neutron			
+Positron			
+Proton			
+Anti-Proton		
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Xi - dss		
+Omega - sss		
+charmed Omega - ssc	
+
+[49]
+Positron			
+Electron-antineutrino	
+Proton			
+Anti-Proton		
+Neutron			
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Xi - dss		
+charmed Omega - ssc	
+
+[50]
+Electron-antineutrino	
+Up Quark		
+Proton			
+Anti-Proton		
+Neutron			
+Positron			
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+charmed Omega - ssc	
+charmed Xi - usc	
+Charmed Xi - dsc	
+Pion+ - ud/					
+Pion- - u/d		
+
+[51]
+Positron			
+Down Quark		
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Omega - sss		
+Pion+ - ud/					
+Pion- - u/d		
+
+[52]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Omega - sss		
+charmed Omega - ssc	
+charmed Xi - usc	
+Pion- - u/d		
+
+[53]
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Proton			
+Anti-Proton		
+Neutron			
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Omega - sss		
+charmed Xi - usc	
+Pion- - u/d		
+
+[54]
+Electron-Neutrino	
+Anti-Up Antiquark	
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+K-Long - dx/+sd/	
+Eta Prime		
+Rho - ud/		
+Phi - ss/	
+
+[55]
+Up Quark		
+Down Quark		
+Proton			
+Anti-Proton		
+Neutron			
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+K-Long - dx/+sd/	
+Eta			
+Eta Prime	
+
+[56]
+Electron-Neutrino	
+Positron			
+Proton			
+Anti-Proton		
+Electron-antineutrino	
+Anti-Up Antiquark	
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+K-Long - dx/+sd/	
+Rho - u/d		
+Phi - ss/	
+
+[57]
+Neutron			
+Electron		
+Electron-Neutrino	
+Proton			
+Anti-Proton		
+Positron			
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+K-Long - dx/+sd/	
+Eta			
+Rho - u/d		
+Phi - ss/	
+Charm Quark		
+
+[58]
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Up Quark		
+Down Quark		
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+K-Long - dx/+sd/	
+Eta			
+Eta Prime		
+Rho - ud/		
+Rho - u/d	
+
+[59]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+K-Long - dx/+sd/	
+Eta			
+Eta Prime		
+Rho - ud/	
+
+[60]
+Neutral Kaon - ds/
+Kaon - - u/s		
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+K-Short - ds/-sd/	
+K-Long - dx/+sd/	
+Eta			
+Eta Prime		
+Rho - ud/	
+J/Psi - cc/		
+Upsilon - bb/		
+
+[61]
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+bottom Lambda - udb	
+Kaon + - us/		
+Kaon - - u/s		
+Neutral Kaon - ds/	
+K-Short - ds/-sd/		
+Rho - u/d		
+Phi - ss/		
+J/Psi - cc/		
+Upsilon - bb/
+		
+[62]
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Muon			
+Muon-Neutrino		
+Tau-Neutrino		
+Anti-Tau Lepton		
+Tau-Antineutrino	
+Kaon + - us/		
+Kaon - - u/s		
+Rho - u/d		
+Phi - ss/		
+J/Psi - cc/		
+Upsilon - bb/		
+
+[63]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Kaon - - u/s		
+Neutral Kaon - ds/	
+K-Short - ds/-sd/	
+K-Long - dx/+sd/	
+Eta			
+Eta Prime		
+Rho - ud/		
+Rho - u/d		
+Phi - ss/		
+J/Psi - cc/		
+Upsilon - bb/		
+
+[64]
+Anti-Down Antiquark	
+Muon			
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Strange Quark		
+Anti-Charm Antiquark	
+Anti-Strange Antiquark	
+Tau Lepton		
+Tau-Neutrino		
+W Boson (-)		
+Omega - sss		
+charmed Omega - ssc	
+charmed Xi - usc	
+Upsilon - bb/		
+
+[65]
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Proton			
+Anti-Proton		
+Neutron			
+Up Quark		
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Strange Quark		
+Anti-Charm Antiquark	
+charmed Omega - ssc	
+charmed Xi - usc	
+Charmed Xi - dsc	
+Pion+ - ud/					
+Pion- - u/d		
+Rho - u/d		
+Phi - ss/		
+J/Psi - cc/		
+Upsilon - bb/		
+
+[66]
+Delta - uuu		
+Delta - uud		
+Proton			
+Anti-Proton		
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Delta - udd				
+bottom Sigma - ddb	
+Xi - uss		
+Xi - dss		
+Omega - sss		
+Pion+ - ud/			
+Eta			
+Eta Prime		
+J/Psi - cc/		
+Upsilon - bb/		
+
+[67]
+Lambda - uds		
+charmed Lambda - udc	
+Proton			
+Anti-Proton		
+Neutron			
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Anti-Strange Antiquark	
+Tau Lepton		
+Tau-Neutrino		
+Anti-Tau Lepton		
+Tau-Antineutrino	
+Z Boson			
+bottom Lambda - udb	
+Sigma - uus		
+Sigma - uds				
+Pion- - u/d		
+Neutral Pion - uu/dd/	
+Kaon + - us/		
+Kaon - - u/s		
+Neutral Kaon - ds/	
+J/Psi - cc/		
+Upsilon - bb/	
+	
+[68]
+Strange Quark		
+Top Quark		
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Photon			
+Gluon			
+W Boson (+)		
+SIgma - dds		
+bottom Sigma - uub				
+bottom Sigma - ddb	
+Rho - u/d		
+Phi - ss/		
+J/Psi - cc/		
+Upsilon - bb/		
+
+[69]
+Sigma - uds		
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+Muon			
+Lambda - uds		
+charmed Lambda - udc	
+bottom Lambda - udb	
+Sigma - uus		
+SIgma - dds		
+bottom Sigma - uub				
+bottom Sigma - ddb	
+Pion+ - ud/					
+Pion- - u/d		
+Neutral Pion - uu/dd/	
+Kaon + - us/		
+Kaon - - u/s		
+Phi - ss/		
+J/Psi - cc/		
+Upsilon - bb/		
+
+[70]
+Proton			
+Anti-Proton		
+Neutron			
+Electron		
+Electron-Neutrino	
+Photon			
+Gluon			
+W Boson (+)		
+W Boson (-)		
+Z Boson			
+Delta - uuu		
+Delta - uud		
+Xi - dss		
+Omega - sss		
+charmed Omega - ssc	
+charmed Xi - usc	
+Charmed Xi - dsc	
+Pion+ - ud/					
+Pion- - u/d		
+Neutral Pion - uu/dd/	
+
+

@@ -1,0 +1,74 @@
+Proton			
+Anti-Proton		
+Neutron			
+
+Electron		
+Electron-Neutrino	
+Positron			
+Electron-antineutrino	
+Up Quark		
+Down Quark		
+Anti-Up Antiquark	
+Anti-Down Antiquark	
+
+Muon			
+Muon-Neutrino		
+Antimuon		
+Muon-Antineutrino	
+Charm Quark		
+Strange Quark		
+Anti-Charm Antiquark	
+Anti-Strange Antiquark	
+
+Tau Lepton		
+Tau-Neutrino		
+Anti-Tau Lepton		
+Tau-Antineutrino	
+Top Quark		
+
+
+Photon			
+Gluon			
+W Boson (+)		
+W Boson (-)		
+Z Boson			
+
+Delta - uuu		
+Delta - uud		
+Delta - udd		
+Delta - ddd		
+Lambda - uds		
+charmed Lambda - udc	
+bottom Lambda - udb	
+Sigma - uus		
+Sigma - uds		
+SIgma - dds		
+bottom Sigma - uub				
+bottom Sigma - ddb	
+Xi - uss		
+Xi - dss		
+Omega - sss		
+charmed Omega - ssc	
+charmed Xi - usc	
+Charmed Xi - dsc	
+
+Pion+ - ud/					
+Pion- - u/d		
+Neutral Pion - uu/dd/	
+Kaon + - us/		
+Kaon - - u/s		
+Neutral Kaon - ds/	
+K-Short - ds/-sd/	
+K-Long - dx/+sd/	
+Eta			
+Eta Prime		
+Rho - ud/		
+Rho - u/d		
+Phi - ss/		
+J/Psi - cc/		
+Upsilon - bb/		
+
+UNKNOWN 001		
+UNKNOWN 002		
+UNKNOWN 003		
+UNKNOWN 004		

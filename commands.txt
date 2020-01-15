@@ -1,0 +1,1681 @@
+date:
+ACCESSING
+[0.01]
+.
+[0.01]
+Tuesday, May 23rd, 2007.
+
+;
+
+
+suicide:
+
+BEGINNING QUANTUM SUICIDE
+[input]
+[qs10000]
+RUNNING QUANTUM SUICIDE
+[begin]
+123
+[end]
+FINISHED
+
+;
+
+
+testshell:
+
+TESTING SHELL
+
+plz
+[shelldown]
+[0.4]
+[shellup]
+tmx
+TEST COMPLETE
+
+;
+
+testkill:
+
+TESTING DEATH
+[kill]
+[10.0]
+TESTING LIFE
+[raise]
+
+;
+
+
+restart:
+
+SHUTTING DOWN
+[kill]
+[8.0]
+BYE
+[shelldown]
+[2.0]
+[shellup]
+WELCOME BACK
+[raise]
+
+;
+
+
+debug:
+##---------------------
+## MATH UTILITY FUNCTIONS
+##---------------------
+
+def bound(value, low, high):
+    "Bound a value between low and high"
+    if value < low:
+        return low
+    elif value > high:
+        return high
+    else:
+        return value
+
+def powerset(items):
+    "Create the powerset of a set of items"
+    result = {}
+    while len(items) > 0:
+        curr = items{0}
+        for i in items{1:}:
+            if not i == curr:
+                result.append((curr, i))
+        items = {i for i in items if not i == curr}
+    return result
+
+;
+
+
+troubleshoot:
+    def timed(self):
+        global active, shutdown
+        if self.input:
+            return None
+        if self.dotp:
+            if self.cloops < self.cloopsmax:
+                if self.dotcount < self.dotmax:
+                    self.lines{0} += '.'
+                    self.dotcount += 1
+                else:
+                    self.lines{0} = self.lines{0}{:-self.dotmax}
+                    self.dotcount = 0
+                    self.cloops += 1
+            else:
+                self.lines{0} += '.....EXECUTED'
+                self.lines.insert(0, 'command>>')
+                self.dotcount = 0
+                self.cloops = 0
+                self.dotp = False
+        if self.counter:
+            if self.countertime < self.countermax:
+                self.countertime += self.counterrate
+                self.lines{0} = str(self.countertime)
+                return None
+            else:
+                self.lines{0} = str(self.countermax)
+                self.counter = False
+                self.countertime = 0.0
+                self.countermax = 0.0
+                self.counterrate = 0.0
+        if self.wait:
+            if len(self.currmsg) == 0:
+                self.wait = False
+                self.time = 0.0
+                self.pause = 0.0
+                self.lines.insert(0, 'command>>')
+                return None
+            elif self.pause > 0.0:
+                if (time() - self.time) > self.pause:
+                    self.lines.insert(0, self.currmsg{0})
+                    self.currmsg = self.currmsg{1:}
+                    self.time = 0.0
+                    self.pause = 0.0
+                    return None
+            elif '.' in self.currmsg{0}:
+                if 'start' in self.currmsg{0}:
+                    active = True
+                    self.currmsg = self.currmsg{1:}
+                elif 'kill' in self.currmsg{0}:
+                    shutdown = True
+                    self.currmsg = self.currmsg{1:}
+                elif 'stop' in self.currmsg{0}:
+                    active = False
+                    self.currmsg = self.currmsg{1:}
+                elif 'counter' in self.currmsg{0}:
+                    self.counter = True
+                    self.countertime = float(self.currmsg{1}{1:-1})
+                    self.countermax = float(self.currmsg{2{}1:-1})
+                    self.counterrate = float(self.currmsg{3{}1:-1})
+                    self.currmsg = self.currmsg{4:}
+                    self.lines.insert(0, str(self.countertime))
+                elif 'input' in self.currmsg{0}:
+                    self.input = True
+                    self.currmsg = self.currmsg{1:}
+                else:
+                    self.time = time()
+                    self.pause = float(self.currmsg{0{}1:-1})
+                    self.currmsg = self.currmsg{1:}
+                return None
+            else:
+                self.lines.insert(0, self.currmsg{0})
+                self.currmsg = self.currmsg{1:}
+    def process(self):
+        global active
+        cmd = self.lines{0{}9:}
+        if cmd == 'cmds':
+            for i in self.commands.items():
+                self.lines.insert(0, str(i))
+                self.lines.insert(0, 'command>>')                   
+        elif cmd in self.commands:
+            reply = self.commands{cmd}
+            if '{' in reply:
+                self.currmsg = {i.strip() for i in reply.split('\n') if not i == ''}
+                self.wait = True
+                return None
+            for i in reverse(self.commands{cmd}.split('\n')):
+                if i == '': continue
+                else:
+                    self.lines.insert(0, i)
+                    self.lines.insert(0, 'command>>')   
+;
+
+
+
+shutdown:
+tERMINATING ACCELERATOR NETWORK BRIDGE
+[kill]
+.
+..
+...
+....
+CUTTING POWER
+.
+LENS BLOCK A DEACTIVATED
+.
+LENS BLOCK B DEACTIVATED
+.
+LENS BLOCK C DEACTIVATED
+.
+LENS BLOCK D DEACTIVATED
+.
+..
+ALL LENSES POWERED DOWN
+.
+..
+POWERING DOWN COLLISION CHAMBER
+.
+SENSOR BLOCK A DEACTIVATED
+.
+SENSOR BLOCK B DEACTIVATED
+.
+SENSOR BLOCK C DEACTIVATED
+.
+SENSOR BLOCK D DEACTIVATED
+.
+SENSOR BLOCK E DEACTIVATED
+.
+..
+COLLISION CHAMBER POWERED DOWN
+.
+..
+POWERING DOWN ACCELERATOR POWER CORE
+.
+..
+...
+....
+ACCLERATOR POWERED DOWN
+.
+..
+...
+....
+NETWORK BRIDGE TERMNATED
+.
+..
+...
+....
+CLOSING SECONDARY SUBSYSTEMS
+.
+SUBSYSTEMS CLOSED
+.
+..
+...
+....
+TERMINATING PRIMARY SYSTEM
+.
+..
+...
+....
+PRIMARY SYSTEM TERMINATED
+.
+..
+...
+....
+CLOSING GUI
+.
+[0.6]
+..
+[0.6]
+...
+[0.6]
+....
+[0.6]
+.....
+[0.6]
+......
+[0.6]
+.......
+[0.6]
+........
+[0.6]
+.........
+[0.6]
+..........
+
+;
+
+accel.sequence1:
+COMMENCING SYSTEM CHECK
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+PROBING MAGNETIC LENSES
+.
+PROCESSING...
+LENSE a1 NOMINAL
+.
+PROCESSING...
+LENSE a2 NOMINAL
+.
+PROCESSING...
+LENSE a3 NOMINAL
+.
+PROCESSING...
+LENSE a4 NOMINAL
+.
+PROCESSING...
+LENSE b5 NOMINAL
+.
+PROCESSING...
+LENSE b6 NOMINAL
+.
+PROCESSING...
+LENSE b7 NOMINAL
+.
+PROCESSING...
+LENSE b8 NOMINAL
+.
+PROCESSING...
+LENSE b9 NOMINAL
+.
+PROCESSING...
+LENSE c10 NOMINAL
+.
+PROCESSING...
+LENSE c11 NOMINAL
+.
+PROCESSING...
+LENSE d12 NOMINAL
+.
+PROCESSING...
+LENSE d13 NOMINAL
+.
+PROCESSING...
+LENSE d14 NOMINAL
+.
+PROCESSING...
+LENSE d15 NOMINAL
+.
+PROCESSING...
+LENSE d16 NOMINAL
+.
+PARAMETERS
+ALL LENSES FUNCTIONING WITHIN SPECIFIED .
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+PROBING COLLISION CHAMBER
+.
+PROCESSING...
+SENSOR BLOCK A NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK B NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK C NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK D NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK E NOMINAL
+.
+PARAMETERS
+ALL SENSORS FUNCTIONING WITHIN SPECIFIED 
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING INCIDENT PARTICLE INFORMATION  
+[input]
+[0.03]
+.
+[0.03]
+INCIDENT PARTICLE = PROTON = p
+COMPOSITION = uud
+STRANGENESS = 0
+CHARM = 0
+BOTTOMNESS = 0
+CHARGE = 1
+SPIN = 1/2
+REST MASS = 938 MeV
+MEAN LIFETIME = stable
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+INPUT CHAMBER AWAITING PROTIUM INPUT
+.
+[0.6]
+..
+[0.6]
+...
+[0.6]
+....
+[0.6]
+.....
+[0.6]
+......
+[0.6]
+.......
+[input]
+PROTIUM DETECTED
+.
+MEASURING PRESSURE (Pa)
+[counter]
+[240.9375]
+[604.2037]
+[6.1245]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+NOMINAL PRESSURE REACHED
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING INPUT  
+[input]
+.
+[0.03]
+..
+INITIALIZING IONIZATION
+[1]
+IONIZING
+[1]
+IONIZATION COMPLETE
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING ATOMIC INFORMATION  
+[input]
+[0.03]
+.
+[0.03]
+ATOMIC REACTION = Rhodium = Rh
+ATOMIC NUMBER = 45
+PHASE = solid
+DENSITY = 12.41 g.cm-3		
+LIQUID DENSITY AT M.P. = 10.7 g.cm-3
+HEAT OF FUSION = 26.59 KJ.mol-1	
+HEAT OF VAPORIZATION = 	494 KJ.mol-1
+MELTING POINT = 2237K
+BOILING POINT = 3968K
+ELECTRICAL RESISTIVITY (0C) = 43.3 n.m
+HEAT CAPACITY AT 25C = 24.98 J.mol-1.K-1
+ELECTRONEGATIVITY = 2.28
+ATOMIC RADIUS = 135 pro
+COVALENT RADIUS = 135 pm.
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+COLLISION SEQUENCE PREPARED
+[0.03]
+.
+[0.03]
+AWAITING INPUT  
+[input]
+.
+INITIALIZING
+[1.0]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+SEQUENCE INITIALIZED
+.
+COMMENCING PROTIUM ACCELERATION SEQUENCE
+.
+MEASURING PROTON STREAM VELOCITY (m/s)
+.
+[counter]
+[0]
+[256432781.97]
+[1460012.45]
+.
+MAXIMUM VELOCITY REACHED
+.
+..
+...
+....
+REDIRECTING PARTICLE STREAM
+.
+PARTICLES REDIRECTED
+.
+COLLISION IMMINENT
+.
+COLLISION IN 0.03 nsecs
+COLLISION IN 0.02 nsecs
+COLLISION IN 0.01 nsecs
+COLLISION IN 0.00 nsecs
+.
+[start]
+COLLISION DETECTED
+.
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+READING SENSOR BUFFERS
+.
+..
+...
+....
+LIVE DATA THROUGHPUT
+.
+..
+...
+....
+BUFFERED DATA ANALYZED
+.
+..
+...
+....
+READINGS STABLE
+.
+..
+...
+....
+TERMINATING EXPERIMENT
+[stop]
+.
+EXPERIMENT TERMINATED
+[0.03]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+EXAMINING SENSOR RECORDS
+[0.03]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+NO ANOMALIES DETECTED
+.
+READINGS ARE ACCURATE
+.
+DUPLICATE BACKUPS CREATED
+. 
+RESULTS STORED
+.
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+accel.sequence2:
+COMMENCING SYSTEM CHECK
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+PROBING MAGNETIC LENSES
+.
+PROCESSING...
+LENSE a1 NOMINAL
+.
+PROCESSING...
+LENSE a2 NOMINAL
+.
+PROCESSING...
+LENSE a3 NOMINAL
+.
+PROCESSING...
+LENSE a4 NOMINAL
+.
+PROCESSING...
+LENSE b5 NOMINAL
+.
+PROCESSING...
+LENSE b6 NOMINAL
+.
+PROCESSING...
+LENSE b7 NOMINAL
+.
+PROCESSING...
+LENSE b8 NOMINAL
+.
+PROCESSING...
+LENSE b9 NOMINAL
+.
+PROCESSING...
+LENSE c10 NOMINAL
+.
+PROCESSING...
+LENSE c11 NOMINAL
+.
+PROCESSING...
+LENSE d12 NOMINAL
+.
+PROCESSING...
+LENSE d13 NOMINAL
+.
+PROCESSING...
+LENSE d14 NOMINAL
+.
+PROCESSING...
+LENSE d15 NOMINAL
+.
+PROCESSING...
+LENSE d16 NOMINAL
+.
+PARAMETERS
+ALL LENSES FUNCTIONING WITHIN SPECIFIED .
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+PROBING COLLISION CHAMBER
+.
+PROCESSING...
+SENSOR BLOCK A NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK B NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK C NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK D NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK E NOMINAL
+.
+PARAMETERS
+ALL SENSORS FUNCTIONING WITHIN SPECIFIED 
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING INCIDENT PARTICLE INFORMATION  
+[input]
+[0.03]
+.
+[0.03]
+INCIDENT PARTICLE = PROTON = p
+COMPOSITION = uud
+STRANGENESS = 0
+CHARM = 0
+BOTTOMNESS = 0
+CHARGE = 1
+SPIN = 1/2
+REST MASS = 938 MeV
+MEAN LIFETIME = stable
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+INPUT CHAMBER AWAITING PROTIUM INPUT
+.
+[0.6]
+..
+[0.6]
+...
+[0.6]
+....
+[0.6]
+.....
+[0.6]
+......
+[0.6]
+.......
+[input]
+PROTIUM DETECTED
+.
+MEASURING PRESSURE (Pa)
+[counter]
+[240.9375]
+[597.2411]
+[6.1245]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+NOMINAL PRESSURE REACHED
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING INPUT  
+[input]
+.
+[0.03]
+..
+INITIALIZING IONIZATION
+[1]
+IONIZING
+[1]
+IONIZATION COMPLETE
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING ATOMIC INFORMATION  
+[input]
+[0.03]
+.
+[0.03]
+ATOMIC REACTION = Lanthanum = La
+ATOMIC NUMBER = 57
+PHASE = solid
+DENSITY = 6.162 g.cm-3		
+LIQUID DENSITY AT M.P. = 5.94 g.cm-3
+HEAT OF FUSION = 6.20 KJ.mol-1	
+HEAT OF VAPORIZATION = 	402.1 KJ.mol-1
+MELTING POINT = 1193K
+BOILING POINT = 3737K
+ELECTRICAL RESISTIVITY (0C) = 615 n.m
+HEAT CAPACITY AT 25C = 27.11 J.mol-1.K-1
+ELECTRONEGATIVITY = 1.10
+ATOMIC RADIUS = 195 pro
+COVALENT RADIUS = 169 pm.
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+COLLISION SEQUENCE PREPARED
+[0.03]
+.
+[0.03]
+AWAITING INPUT  
+[input]
+.
+INITIALIZING
+[1.0]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+SEQUENCE INITIALIZED
+.
+COMMENCING PROTIUM ACCELERATION SEQUENCE
+.
+MEASURING PROTON STREAM VELOCITY (m/s)
+.
+[counter]
+[0]
+[256512787.12]
+[1460012.45]
+.
+MAXIMUM VELOCITY REACHED
+.
+..
+...
+....
+REDIRECTING PARTICLE STREAM
+.
+PARTICLES REDIRECTED
+.
+COLLISION IMMINENT
+.
+COLLISION IN 0.03 nsecs
+COLLISION IN 0.02 nsecs
+COLLISION IN 0.01 nsecs
+COLLISION IN 0.00 nsecs
+.
+NO COLLISION DETECTED
+.
+SENSORS REPORTING NEAR ZERO ACTIVITY
+[0.1]
+.
+[0.1]
+..
+[0.1]
+...
+[0.1]
+....
+[0.1]
+SENSORS REPORTING NEAR ZERO ACTIVITY
+[0.1]
+.
+[0.1]
+..
+[0.1]
+...
+[0.1]
+....
+[0.1]
+NO COLLISION DETECTED
+[0.1]
+.
+[0.1]
+..
+[0.1]
+...
+[0.1]
+....
+[0.1]
+TERMINATING EXPERIMENT
+[0.1]
+.
+[0.1]
+EXPERIMENT TERMINATED
+[0.1]
+.
+[0.1]
+..
+[0.1]
+...
+[0.1]
+....
+[0.1]
+COLLISION FAILED
+.
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+accel.sequence3:
+COMMENCING SYSTEM CHECK
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+PROBING MAGNETIC LENSES
+.
+PROCESSING...
+LENSE a1 NOMINAL
+.
+PROCESSING...
+LENSE a2 NOMINAL
+.
+PROCESSING...
+LENSE a3 NOMINAL
+.
+PROCESSING...
+LENSE a4 NOMINAL
+.
+PROCESSING...
+LENSE b5 NOMINAL
+.
+PROCESSING...
+LENSE b6 NOMINAL
+.
+PROCESSING...
+LENSE b7 NOMINAL
+.
+PROCESSING...
+LENSE b8 NOMINAL
+.
+PROCESSING...
+LENSE b9 NOMINAL
+.
+PROCESSING...
+LENSE c10 NOMINAL
+.
+PROCESSING...
+LENSE c11 NOMINAL
+.
+PROCESSING...
+LENSE d12 NOMINAL
+.
+PROCESSING...
+LENSE d13 NOMINAL
+.
+PROCESSING...
+LENSE d14 NOMINAL
+.
+PROCESSING...
+LENSE d15 NOMINAL
+.
+PROCESSING...
+LENSE d16 NOMINAL
+.
+PARAMETERS
+ALL LENSES FUNCTIONING WITHIN SPECIFIED .
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+PROBING COLLISION CHAMBER
+.
+PROCESSING...
+SENSOR BLOCK A NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK B NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK C NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK D NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK E NOMINAL
+.
+PARAMETERS
+ALL SENSORS FUNCTIONING WITHIN SPECIFIED 
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING INCIDENT PARTICLE INFORMATION  
+[input]
+[0.03]
+.
+[0.03]
+INCIDENT PARTICLE = PROTON = p
+COMPOSITION = uud
+STRANGENESS = 0
+CHARM = 0
+BOTTOMNESS = 0
+CHARGE = 1
+SPIN = 1/2
+REST MASS = 938 MeV
+MEAN LIFETIME = stable
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+INPUT CHAMBER AWAITING PROTIUM INPUT
+.
+[0.6]
+..
+[0.6]
+...
+[0.6]
+....
+[0.6]
+.....
+[0.6]
+......
+[0.6]
+.......
+[input]
+PROTIUM DETECTED
+.
+MEASURING PRESSURE (Pa)
+[counter]
+[240.9375]
+[608.2037]
+[6.1245]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+NOMINAL PRESSURE REACHED
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING INPUT  
+[input]
+.
+[0.03]
+..
+INITIALIZING IONIZATION
+[1]
+IONIZING
+[1]
+IONIZATION COMPLETE
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING ATOMIC INFORMATION  
+[input]
+[0.03]
+.
+[0.03]
+ATOMIC REACTION = Lanthanum = La
+ATOMIC NUMBER = 57
+PHASE = solid
+DENSITY = 6.162 g.cm-3		
+LIQUID DENSITY AT M.P. = 5.94 g.cm-3
+HEAT OF FUSION = 6.20 KJ.mol-1	
+HEAT OF VAPORIZATION = 	402.1 KJ.mol-1
+MELTING POINT = 1193K
+BOILING POINT = 3737K
+ELECTRICAL RESISTIVITY (0C) = 615 n.m
+HEAT CAPACITY AT 25C = 27.11 J.mol-1.K-1
+ELECTRONEGATIVITY = 1.10
+ATOMIC RADIUS = 195 pro
+COVALENT RADIUS = 169 pm.
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+COLLISION SEQUENCE PREPARED
+[0.03]
+.
+[0.03]
+AWAITING INPUT  
+[input]
+.
+INITIALIZING
+[1.0]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+SEQUENCE INITIALIZED
+.
+COMMENCING PROTIUM ACCELERATION SEQUENCE
+.
+MEASURING PROTON STREAM VELOCITY (m/s)
+.
+[counter]
+[0]
+[255664912.91]
+[1460012.45]
+.
+MAXIMUM VELOCITY REACHED
+.
+..
+...
+....
+REDIRECTING PARTICLE STREAM
+.
+PARTICLES REDIRECTED
+.
+COLLISION IMMINENT
+.
+COLLISION IN 0.03 nsecs
+COLLISION IN 0.02 nsecs
+COLLISION IN 0.01 nsecs
+COLLISION IN 0.00 nsecs
+.
+[start]
+COLLISION DETECTED
+.
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+READING SENSOR BUFFERS
+.
+..
+...
+....
+LIVE DATA THROUGHPUT
+.
+..
+...
+....
+BUFFERED DATA ANALYZED
+[0.05]
+.
+..
+...
+....
+READINGS STABLE
+.
+..
+...
+....
+TERMINATING EXPERIMENT
+.
+[stop]
+EXPERIMENT TERMINATED
+[0.03]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+EXAMINING SENSOR RECORDS
+[0.03]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+UNKNOWN VARIALES DETECTED
+[0.25]
+UNKNOWN VARIALES DETECTED.
+[0.25]
+UNKNOWN VARIALES DETECTED..
+[0.25]
+UNKNOWN VARIALES DETECTED...
+[0.25]
+.
+EXAMINING SENSORS
+[0.35]
+.
+[0.35]
+..
+[0.35]
+...
+[0.35]
+....
+[0.35]
+PARAMETERS
+SENSORS FUNCTIONING WITHIN SPECIFIED 
+.
+READINGS ARE ACCURATE
+.
+DUPLICATE BACKUPS CREATED
+. 
+RESULTS STORED
+.
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+accel.sequence4:
+COMMENCING SYSTEM CHECK
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+PROBING MAGNETIC LENSES
+.
+PROCESSING...
+LENSE a1 NOMINAL
+.
+PROCESSING...
+LENSE a2 NOMINAL
+.
+PROCESSING...
+LENSE a3 NOMINAL
+.
+PROCESSING...
+LENSE a4 NOMINAL
+.
+PROCESSING...
+LENSE b5 NOMINAL
+.
+PROCESSING...
+LENSE b6 NOMINAL
+.
+PROCESSING...
+LENSE b7 NOMINAL
+.
+PROCESSING...
+LENSE b8 NOMINAL
+.
+PROCESSING...
+LENSE b9 NOMINAL
+.
+PROCESSING...
+LENSE c10 NOMINAL
+.
+PROCESSING...
+LENSE c11 NOMINAL
+.
+PROCESSING...
+LENSE d12 NOMINAL
+.
+PROCESSING...
+LENSE d13 NOMINAL
+.
+PROCESSING...
+LENSE d14 NOMINAL
+.
+PROCESSING...
+LENSE d15 NOMINAL
+.
+PROCESSING...
+LENSE d16 NOMINAL
+.
+PARAMETERS
+ALL LENSES FUNCTIONING WITHIN SPECIFIED .
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+PROBING COLLISION CHAMBER
+.
+PROCESSING...
+SENSOR BLOCK A NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK B NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK C NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK D NOMINAL
+.
+PROCESSING...
+SENSOR BLOCK E NOMINAL
+.
+PARAMETERS
+ALL SENSORS FUNCTIONING WITHIN SPECIFIED 
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING INCIDENT PARTICLE INFORMATION 
+[input]
+[0.03]
+.
+[0.03]
+INCIDENT PARTICLE = ELECTRON = e
+COMPOSITION = e
+STRANGENESS = 0
+CHARM = 0
+BOTTOMNESS = 0
+CHARGE = -1
+SPIN = 1/2
+REST MASS = 511 KeV
+MEAN LIFETIME = stable
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+INPUT CHAMBER AWAITING PROTIUM INPUT
+.
+[0.6]
+..
+[0.6]
+...
+[0.6]
+....
+[0.6]
+.....
+[0.6]
+......
+[0.6]
+.......
+[input]
+PROTIUM DETECTED
+.
+MEASURING PRESSURE (Pa)
+[counter]
+[240.9375]
+[615.2037]
+[6.1245]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+NOMINAL PRESSURE REACHED
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING INPUT  
+[input]
+.
+[0.03]
+..
+INITIALIZING IONIZATION
+[1]
+IONIZING
+[1]
+IONIZATION COMPLETE
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+AWAITING ATOMIC INFORMATION 
+[input]
+[0.03]
+.
+[0.03]
+ATOMIC REACTION = IRIDIUM = Ir
+ATOMIC NUMBER = 77
+PHASE = solid
+DENSITY = 22.65 g.cm-3		
+LIQUID DENSITY AT M.P. = 19 g.cm-3
+HEAT OF FUSION = 41.12 KJ.mol-1	
+HEAT OF VAPORIZATION = 	563 KJ.mol-1
+MELTING POINT = 2719K
+BOILING POINT = 4701K
+ELECTRICAL RESISTIVITY (0C) = 47.1 n.m
+HEAT CAPACITY AT 25C = 25.10 J.mol-1.K-1
+ELECTRONEGATIVITY = 2.20
+ATOMIC RADIUS = 135 pro
+COVALENT RADIUS = 137 pm.
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+COLLISION SEQUENCE PREPARED
+[0.03]
+.
+[0.03]
+AWAITING INPUT  
+[input]
+.
+INITIALIZING
+[1.0]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+SEQUENCE INITIALIZED
+.
+COMMENCING PROTIUM ACCELERATION SEQUENCE
+.
+MEASURING PROTON STREAM VELOCITY (m/s)
+.
+[counter]
+[0]
+[278432383.97]
+[1460312.45]
+.
+MAXIMUM VELOCITY REACHED
+.
+..
+...
+....
+REDIRECTING PARTICLE STREAM
+.
+PARTICLES REDIRECTED
+.
+COLLISION IMMINENT
+.
+COLLISION IN 0.03 nsecs
+COLLISION IN 0.02 nsecs
+COLLISION IN 0.01 nsecs
+COLLISION IN 0.00 nsecs
+.
+[start]
+COLLISION DETECTED
+.
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+BUFFERING SENSOR DATA
+.
+..
+...
+....
+READING SENSOR BUFFERS
+.
+..
+...
+....
+LIVE DATA THROUGHPUT
+.
+..
+...
+....
+BUFFERED DATA ANALYZED
+.
+..
+...
+....
+READINGS STABLE
+.
+..
+...
+....
+TERMINATING EXPERIMENT
+[stop]
+.
+EXPERIMENT TERMINATED
+[0.03]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+EXAMINING SENSOR RECORDS
+[0.03]
+.
+[0.03]
+..
+[0.03]
+...
+[0.03]
+....
+[0.03]
+NO ANOMALIES DETECTED
+.
+READINGS ARE ACCURATE
+.
+DUPLICATE BACKUPS CREATED
+. 
+RESULTS STORED
+.
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+stop:
+TERMINATING EXPERIMENT
+[stop]
+
+;
+
+start:
+.
+[start]
+;

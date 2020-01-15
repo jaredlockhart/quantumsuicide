@@ -1,0 +1,76 @@
+N/A			N/A	N/A	N/A	N/A	N/A	N/A	N/A	N/A
+
+Proton			p	+1	2	+1/2	+1/2	1	1	2.339 MeV
+Anti-Proton		ap	-1	2	-1/2	-1/2	1	1	2.339 MeV
+Neutron			n	0	1	-1/2	+1/2	1	1	1.239 MeV
+
+Electron		e	-1	2	-1/2	-1/2	1	1	0.51099 MeV
+Electron-Neutrino	ve	0	2	+1/2	-1/2	1	1	2 eV
+Positon			p	+1	1	0	+1	1	1	0.51099 MeV
+Electron-antineutrino	v/e	0	1	0	0	1	1	2 eV
+Up Quark		u	+2/3	2	+1/2	+1/6	3	1	3 MeV
+Down Quark		d	-1/3	2	-1/2	+1/6	3	1	6 MeV
+Anti-Up Antiquark	u	-2/3	1	0	-2/3	3	1	3 MeV
+Anti-Down Antiquark	d	+1/3	1	0	+1/3	3	1	6 MeV
+
+Muon			m	-1	2	-1/2	-1/2	1	2	105.658 MeV
+Muon-Neutrino		vm	0	2	+1/2	-1/2	1	2	2 eV
+Antimuon		m/	+1	1	0	+1	1	2	105.658 MeV
+Muon-Antineutrino	v/m	0	1	0	0	1	2	2 eV
+Charm Quark		c	+2/3	2	+1/2	+1/6	3	2	1.3 GeV
+Strange Quark		s	-1/3	2	-1/2	+1/6	3	2	100 MeV
+Anti-Charm Antiquark	c/	-2/3	1	0	-2/3	3	2	1.3 GeV
+Anti-Strange Antiquark	s/	+1/3	1	0	+1/3	3	2	100 MeV
+
+Tau Lepton		t	-1	2	-1/2	-1/2	1	3	1.777 GeV
+Tau-Neutrino		vt	0	2	+1/2	-1/2	1	3	2 eV
+Anti-Tau Lepton		t/	+1	1	0	+1	1	3	1.777 GeV
+Tau-Antineutrino	v/t	0	1	0	0	1	3	2 eV
+Top Quark		t	+2/3	2	+1/2	+1/6	3	3	171.4 GeV
+
+
+Photon			Y	0	n/s	1	n/a	n/a	n/a	0 eV
+Gluon			g	0	n/s	1	n/a	3	n/a	0 eV
+W Boson (+)		W+	-1	n/s	0	n/a	n/a	n/a	80.39 GeV
+W Boson (-)		W-	+1	n/s	0	n/a	n/a	n/a	80.39 GeV
+Z Boson			Z	0	n/s	0	n/a	n/a	n/a	91.1874 GeV
+
+Delta - uuu		A++	+2	n/s	+3/2	n/a	n/a	n/a	1.232 GeV
+Delta - uud		A+	+1	n/s	+3/2	n/a	n/a	n/a	1.232 GeV
+Delta - udd		A0	0	n/s	+3/2	n/a	n/a	n/a	1.232 GeV
+Delta - ddd		A-	-1	n/s	+3/2	n/a	n/a	n/a	1.232 GeV
+Lambda - uds		A0	0	n/s	+1/2	n/a	n/a	n/a	1.1157 GeV
+charmed Lambda - udc	A+c	+1	n/s	+1/2	n/a	n/a	n/a	2.285 GeV
+bottom Lambda - udb	A0b	0	n/s	+1/2	n/a	n/a	n/a	5.624 GeV
+Sigma - uus		Y+	+1	n/s	+1/2	n/a	n/a	n/a	1.1894 GeV
+Sigma - uds		Y0	0	n/s	+1/2	n/a	n/a	n/a	1.1925 GeV
+SIgma - dds		Y-	-1	n/s	+1/2	n/a	n/a	n/a	!.1974 GeV
+bottom Sigma - uub	Y+b	+1	n/s	+1/2	n/a	n/a	n/a				
+bottom Sigma - ddb	Y-B	-1	n/s	+1/2	n/a	n/a	n/a
+Xi - uss		Z0	0	n/s	+1/2	n/a	n/a	n/a	1.315 GeV
+Xi - dss		Z-	-1	n/s	+1/2	n/a	n/a	n/a	1.321 GeV
+Omega - sss		0-	-1	n/s	+3/2	n/a	n/a	n/a	1.672 GeV
+charmed Omega - ssc	00c	0	n/s	p.scal	n/a	n/a	n/a	2.698 GeV
+charmed Xi - usc	Z+c	+1	n/s	p.scal	n/a	n/a	n/a	2.466 GeV
+Charmed Xi - dsc	Z0c	0	n/s	p.scal	n/a	n/a	n/a	2.472 GeV
+
+Pion+ - ud/		n+	+1	n/s	p.scal	n/a	n/a	n/a	139.6 Mev			
+Pion- - u/d		n-	-1	n/s	p.scal	n/a	n/a	n/a	139.6 MeV
+Neutral Pion - uu/dd/	n0	0	n/s	p.scal	n/a	n/a	n/a	135 MeV
+Kaon + - us/		K+	+1	n/s	p.scal	n/a	n/a	n/a	493.7 MeV
+Kaon - - u/s		K-	-1	n/s	p.scal	n/a	n/a	n/a	493.7 MeV
+Neutral Kaon - ds/	K0	0	n/s	p.scal	n/a	n/a	n/a	497.7 MeV
+K-Short - ds/-sd/	K0S	0	n/s	p.scal	n/a	n/a	n/a	497.7 MeV
+K-Long - dx/+sd/	K0L	0	n/s	p.scal	n/a	n/a	n/a	497.7 MeV
+Eta			q	0	n/s	p.scal	n/a	n/a	n/a	547.8 MeV
+Eta Prime		q+	0	n/s	p.scal	n/a	n/a	n/a	957.6 MeV
+Rho - ud/		p+	+1	n/s	vector	n/a	n/a	n/a	776 MeV
+Rho - u/d		p-	-1	n/s	vector	n/a	n/a	n/a	776 MeV
+Phi - ss/		q	0	n/s	vector	n/a	n/a	n/a	1.01 GeV
+J/Psi - cc/		J	0	n/s	vector	n/a	n/a	n/a	3.0969 GeV
+Upsilon - bb/		Y	0	n/s	vector	n/a	n/a	n/a	9.46 GeV
+
+UNKNOWN 001		?	0	1	0	+1/6	1	1	3 eV
+UNKNOWN 002		?	-1	3	0	-1/6	1	1	4.62 MeV
+UNKNOWN 003		?	3/2	1	-3/2	0	2	3	12.11 GeV
+UNKNOWN 004		?	-1/2	2	+1/2	-2/3	2	2	0.15701 MeV
